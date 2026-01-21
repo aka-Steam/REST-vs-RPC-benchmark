@@ -686,21 +686,21 @@ def task_create_term(self):
 
 ### A. Графики и визуализации
 
-Интерактивные HTML отчеты с графиками доступны в следующих файлах:
+Интерактивные HTML отчеты с графиками доступны по ссылкам:
 
 **REST API:**
 
-- [Sanity](results/rest/sanity/rest_sanity_20260121_164337.html)
-- [Normal](results/rest/normal/rest_normal_20260121_164443.html)
-- [Stress](results/rest/stress/rest_stress_20260121_164951.html)
-- [Stability](results/rest/stability/rest_stability_20260121_142709.html)
+- [Sanity](https://aka-steam.github.io/REST-vs-RPC-benchmark/results/rest/sanity/rest_sanity_20260121_164337.html)
+- [Normal](https://aka-steam.github.io/REST-vs-RPC-benchmark/results/rest/normal/rest_normal_20260121_164443.html)
+- [Stress](https://aka-steam.github.io/REST-vs-RPC-benchmark/results/rest/stress/rest_stress_20260121_164951.html)
+- [Stability](https://aka-steam.github.io/REST-vs-RPC-benchmark/results/rest/stability/rest_stability_20260121_142709.html)
 
 **gRPC Service:**
 
-- [Sanity](results/grpc/sanity/grpc_sanity_20260121_020225.html)
-- [Normal](results/grpc/normal/grpc_normal_20260121_020329.html)
-- [Stress](results/grpc/stress/grpc_stress_20260121_020834.html)
-- [Stability](results/grpc/stability/grpc_stability_20260121_021152.html)
+- [Sanity](https://aka-steam.github.io/REST-vs-RPC-benchmark/results/grpc/sanity/grpc_sanity_20260121_020225.html)
+- [Normal](https://aka-steam.github.io/REST-vs-RPC-benchmark/results/grpc/normal/grpc_normal_20260121_020329.html)
+- [Stress](https://aka-steam.github.io/REST-vs-RPC-benchmark/results/grpc/stress/grpc_stress_20260121_020834.html)
+- [Stability](https://aka-steam.github.io/REST-vs-RPC-benchmark/results/grpc/stability/grpc_stability_20260121_021152.html)
 
 Каждый HTML файл содержит:
 

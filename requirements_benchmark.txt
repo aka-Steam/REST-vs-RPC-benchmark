@@ -1,0 +1,21 @@
+# Dependencies for benchmark testing
+# Main testing framework
+locust>=2.20.0
+
+# gRPC support for testing gRPC service
+grpcio>=1.66.1
+grpcio-tools>=1.66.1
+
+# Configuration file parsing
+pyyaml>=6.0
+
+# Data analysis and visualization (optional but recommended)
+pandas>=2.0.0
+matplotlib>=3.7.0
+
+# Environment variable management
+python-dotenv>=1.0.1
+
+# SQLAlchemy for database operations in test scripts
+sqlalchemy>=2.0.36
+

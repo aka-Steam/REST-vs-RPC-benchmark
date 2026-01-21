@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+package glossary;
+
+// Glossary CRUD service
+service GlossaryService {
+  rpc ListTerms (ListTermsRequest) returns (ListTermsResponse);
+  rpc GetTerm (GetTermRequest) returns (GetTermResponse);
+  rpc CreateTerm (CreateTermRequest) returns (CreateTermResponse);
+  rpc UpdateTerm (UpdateTermRequest) returns (UpdateTermResponse);
+  rpc DeleteTerm (DeleteTermRequest) returns (DeleteTermResponse);
+}
+
+// Domain entity
+message Term {
+  // If your DB model has id, you can add: int64 id = 1;
+  string keyword = 1;
+  string description = 2;
+}
+
+message ListTermsRequest {}
+message ListTermsResponse {
+  repeated Term items = 1;
+}
+
+message GetTermRequest {
+  string keyword = 1;
+}
+message GetTermResponse {
+  Term item = 1;
+}
+
+message CreateTermRequest {
+  Term item = 1;
+}
+message CreateTermResponse {
+  Term item = 1;
+}
+
+message UpdateTermRequest {
+  Term item = 1;
+}
+message UpdateTermResponse {
+  Term item = 1;
+}
+
+message DeleteTermRequest {
+  string keyword = 1;
+}
+message DeleteTermResponse {
+  bool ok = 1;
+}
+
+

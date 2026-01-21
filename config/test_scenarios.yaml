@@ -1,0 +1,61 @@
+# Test scenarios configuration for Locust benchmark testing
+# Each scenario defines parameters for load testing
+
+scenarios:
+  sanity:
+    name: "Sanity Check"
+    description: "Легкая нагрузка для проверки работоспособности"
+    users: 10
+    spawn_rate: 2
+    duration: "1m"
+    expected_rps: 5
+    expected_p95: 200
+    
+  normal:
+    name: "Normal Load"
+    description: "Рабочая нагрузка - нормальный режим использования"
+    users: 50
+    spawn_rate: 5
+    duration: "5m"
+    expected_rps: 20
+    expected_p95: 500
+    
+  stress:
+    name: "Stress Test"
+    description: "Стресс-тест - приближение к пику производительности"
+    users: 200
+    spawn_rate: 20
+    duration: "3m"
+    expected_rps: 80
+    expected_p95: 1000
+    
+  stability:
+    name: "Stability Test"
+    description: "Тест на стабильность при длительной нагрузке"
+    users: 100
+    spawn_rate: 10
+    duration: "30m"
+    expected_rps: 40
+    expected_p95: 800
+
+# Service configurations
+services:
+  rest:
+    name: "REST API"
+    locustfile: "locustfiles/rest_user.py"
+    host: "http://localhost:8000"
+    user_class: "RestUser"
+    
+  grpc:
+    name: "gRPC Service"
+    locustfile: "locustfiles/grpc_user.py"
+    host: "localhost:50051"
+    user_class: "GrpcUser"
+
+# Output configuration
+output:
+  base_dir: "results"
+  csv_prefix: true
+  html_report: true
+  json_report: false
+

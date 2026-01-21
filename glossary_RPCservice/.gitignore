@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtualenv
+.venv/
+venv/
+env/
+
+# OS / Editors
+.DS_Store
+.idea/
+.vscode/
+
+# Build / Dist
+build/
+dist/
+*.egg-info/
+
+# Testing / Cache
+.pytest_cache/
+.mypy_cache/
+
+# Env / Secrets
+.env
+.env.*
+
+# SQLite databases
+*.sqlite
+*.sqlite3
+glossary.db
+
+# Alembic cache
+alembic/*.pyc
+alembic/versions/__pycache__/
+
+

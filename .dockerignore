@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database (will be mounted as volume)
+*.db
+*.db-journal
+
+# Logs
+*.log
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+*.md
+README*
+

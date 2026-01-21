@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  rest-service:
+    build:
+      context: ./glossary_RESTservice
+      dockerfile: Dockerfile
+    container_name: glossary-rest
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./glossary_RESTservice/glossary.db:/app/glossary.db
+    environment:
+      - APP_DATABASE_URL=sqlite:///./glossary.db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  grpc-service:
+    build:
+      context: ./glossary_RPCservice
+      dockerfile: Dockerfile
+    container_name: glossary-grpc
+    ports:
+      - "50051:50051"
+    volumes:
+      - ./glossary_RPCservice/glossary.db:/app/glossary.db
+    environment:
+      - APP_DATABASE_URL=sqlite:///./glossary.db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-m", "client.cli", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+

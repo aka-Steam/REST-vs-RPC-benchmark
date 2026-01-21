@@ -1,0 +1,2 @@
+Method,Name,Error,Occurrences
+POST,Create Term,HTTPError('500 Server Error: Internal Server Error for url: Create Term'),2

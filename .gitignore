@@ -12,12 +12,6 @@ venv/
 ENV/
 env/
 
-# Locust results
-results/**/*.csv
-results/**/*.html
-results/**/*.json
-!results/.gitkeep
-
 # Database files
 *.db
 *.db-journal

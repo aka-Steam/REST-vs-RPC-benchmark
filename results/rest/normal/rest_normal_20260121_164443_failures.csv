@@ -1,0 +1,5 @@
+Method,Name,Error,Occurrences
+GET,Get Term,HTTPError('500 Server Error: Internal Server Error for url: Get Term'),9
+POST,Create Term,HTTPError('500 Server Error: Internal Server Error for url: Create Term'),72
+GET,Get Term,HTTPError('404 Client Error: Not Found for url: Get Term'),9
+POST,Create Term,HTTPError('409 Client Error: Conflict for url: Create Term'),5
